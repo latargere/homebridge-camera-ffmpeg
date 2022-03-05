@@ -67,12 +67,6 @@ class FfmpegPlatform implements DynamicPlatformPlugin {
             this.log.warn('The source for this camera is missing "-i", it is likely misconfigured.', cameraConfig.name);
           }
         }
-        if (cameraConfig.videoConfig.stillImageSource) {
-          const stillArgs = cameraConfig.videoConfig.stillImageSource.split(/\s+/);
-          if (!stillArgs.includes('-i')) {
-            this.log.warn('The stillImageSource for this camera is missing "-i", it is likely misconfigured.', cameraConfig.name);
-          }
-        }
         if (cameraConfig.videoConfig.vcodec === 'copy' && cameraConfig.videoConfig.videoFilter) {
           this.log.warn('A videoFilter is defined, but the copy vcodec is being used. This will be ignored.', cameraConfig.name);
         }

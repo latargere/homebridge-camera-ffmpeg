@@ -71,6 +71,7 @@
   "dependencies": {
     "ffmpeg-for-homebridge": "^0.0.9",
     "mqtt": "4.2.8",
-    "pick-port": "^1.0.0"
+    "pick-port": "^1.0.0",
+    "node-fetch": "^2.6.7"
   }
 }
